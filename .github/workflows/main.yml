@@ -24,13 +24,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       # Setup virtual env, install dependencies
-      name: Create new virtual env and activate it
+      - name: Create new virtual env and activate it
         run: |
           python3 -m venv flask-env
           source flask-env/bin/activate
           python3 -m pip install -r requirements.txt
           python3 -m pip install gunicorn
-  deploy:
