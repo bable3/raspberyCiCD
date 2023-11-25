@@ -26,7 +26,5 @@ jobs:
       # Setup virtual env, install dependencies
       - name: build docker image
         run: |
-          docker build -t docker-nodeapp .
-      - name: run docker container
-        run: |
-          docker run -p 8100:8081 -d docker-nodeapp .
+          docker build -t node-app .
+          docker run -p 8080:8081 -d node-app .
