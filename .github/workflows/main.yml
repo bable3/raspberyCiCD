@@ -27,4 +27,4 @@ jobs:
       - name: build docker image
         run: |
           docker build -t node-app .
-          docker run -p 8080:8081 -d node-app .
+          docker run -p 8080:8081 -d node-app
