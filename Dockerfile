@@ -3,5 +3,5 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . .
-CMD node index.js
+ENTRYPOINT ["node", "index.js"]
 EXPOSE 8081
